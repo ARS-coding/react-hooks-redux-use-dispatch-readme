@@ -2,7 +2,7 @@ const initialState = {
   items: [],
 };
 
-function counterReducer(state = initialState, action) {
+export function counterReducer(state = initialState, action) {
   switch (action.type) {
     case "count/increment":
       console.log("Current state.items length %s", state.items.length);
@@ -17,4 +17,6 @@ function counterReducer(state = initialState, action) {
   }
 }
 
-export default counterReducer;
+export function increment() {
+  return { type: "count/increment" }
+}
